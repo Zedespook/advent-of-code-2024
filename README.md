@@ -28,17 +28,36 @@ advent-of-code-2024/
 
 ## Running the Solutions
 
-Most solutions are written in C++. To compile and run:
+Solutions are written in C++17. There are two ways to run the solutions:
+
+### Using the run script (recommended)
+
+Each day's directory contains a `run.sh` script that will compile and run both parts:
 
 ```bash
 # Navigate to the day's directory
 cd dayXX
 
-# Compile (requires C++11 or later)
-g++ -std=c++17 partY.cpp -o partY
+# Make the script executable (first time only)
+chmod +x run.sh
+
+# Run both solutions
+./run.sh
+```
+
+### Manual compilation
+
+If you prefer to compile and run solutions manually:
+
+```bash
+# Navigate to the day's directory
+cd dayXX
+
+# Compile (requires C++17)
+g++ -std=c++17 partY.cpp -o solution
 
 # Run with input
-./partY < input.txt
+./solution < input.txt
 ```
 
 ## Personal Goals
