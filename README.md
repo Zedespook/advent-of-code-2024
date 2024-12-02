@@ -25,6 +25,7 @@ advent-of-code-2024/
 | Day | Problem | Solution | Stars |
 |-----|----------|----------|--------|
 | 01 | [Historian Hysteria](https://adventofcode.com/2024/day/1) | [Solution](day01/) | ⭐⭐ |
+| 02 | [Red-Nosed Reports](https://adventofcode.com/2024/day/2) | [Solution](day02/) | ⭐⭐ |
 
 ## Running the Solutions
 
@@ -73,6 +74,11 @@ g++ -std=c++17 partY.cpp -o solution
 - Learned about sorting-based approach for minimum distance pairing
 - Used hash maps for efficient counting in Part 2
 - Handled integer overflow cases using long long
+
+### Day 2
+- Implemented solution for analyzing nuclear reactor safety reports
+- Used vector operations for efficient sequence checking
+- Added support for Problem Dampener feature in Part 2
 
 ## Acknowledgments
 
