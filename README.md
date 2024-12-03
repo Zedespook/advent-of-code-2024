@@ -26,6 +26,7 @@ advent-of-code-2024/
 |-----|----------|----------|--------|
 | 01 | [Historian Hysteria](https://adventofcode.com/2024/day/1) | [Solution](day01/) | ⭐⭐ |
 | 02 | [Red-Nosed Reports](https://adventofcode.com/2024/day/2) | [Solution](day02/) | ⭐⭐ |
+| 03 | [Mull It Over](https://adventofcode.com/2024/day/3) | [Solution](day03/) | ⭐⭐ |
 
 ## Running the Solutions
 
@@ -79,6 +80,12 @@ g++ -std=c++17 partY.cpp -o solution
 - Implemented solution for analyzing nuclear reactor safety reports
 - Used vector operations for efficient sequence checking
 - Added support for Problem Dampener feature in Part 2
+
+### Day 3
+- Implemented pattern matching for parsing corrupted memory data
+- Used state management for conditional instruction processing
+- Optimized string parsing with early validation checks
+- Handled edge cases in multiplication instruction parsing
 
 ## Acknowledgments
 
