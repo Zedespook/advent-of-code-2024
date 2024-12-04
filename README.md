@@ -12,7 +12,8 @@ Each day's solutions are organized in their own directory:
 
 ```
 advent-of-code-2024/
-├── day-1/
+├── aoc.sh  # Unified build script
+├── day01/
 │   ├── part1.cpp
 │   ├── part2.cpp
 │   └── input.txt
@@ -31,37 +32,44 @@ advent-of-code-2024/
 
 ## Running the Solutions
 
-Solutions are written in C++17. There are two ways to run the solutions:
+Solutions are written in C++23 and compiled with Clang 19. The repository includes a unified build system that makes it easy to compile and run solutions.
 
-### Using the run script (recommended)
+### Using the Build Script
 
-Each day's directory contains a `run.sh` script that will compile and run both parts:
+The `aoc` script in the repository root provides a streamlined way to compile and run solutions:
 
 ```bash
-# Navigate to the day's directory
-cd dayXX
-
 # Make the script executable (first time only)
-chmod +x run.sh
+chmod +x aoc
 
-# Run both solutions
-./run.sh
+# Run both parts of a day
+./aoc <day>
+
+# Run a specific part of a day
+./aoc <day> <part>
+
+# Examples:
+./aoc 1     # Run both parts of Day 1
+./aoc 2 1   # Run only Part 1 of Day 2
 ```
 
-### Manual compilation
+### Build System Features
 
-If you prefer to compile and run solutions manually:
+- Unified compilation settings across all solutions
+- C++23 standard with -O2 optimization
+- AddressSanitizer enabled for runtime error detection
+- Colored output for better readability
+- Automatic input file handling
+- Comprehensive error reporting
 
-```bash
-# Navigate to the day's directory
-cd dayXX
+### Compilation Details
 
-# Compile (requires C++17)
-g++ -std=c++17 partY.cpp -o solution
+All solutions are compiled with the following flags:
 
-# Run with input
-./solution < input.txt
-```
+- `-std=c++23`: Latest C++ standard
+- `-O2`: Level 2 optimization
+- `-fsanitize=address`: AddressSanitizer for memory error detection
+- `-Wall -Wextra -Wpedantic`: Comprehensive warning flags
 
 ## Personal Goals
 
