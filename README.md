@@ -22,11 +22,12 @@ advent-of-code-2024/
 
 ## Solutions
 
-| Day | Problem | Solution | Stars |
-|-----|----------|----------|--------|
-| 01 | [Historian Hysteria](https://adventofcode.com/2024/day/1) | [Solution](day01/) | ⭐⭐ |
-| 02 | [Red-Nosed Reports](https://adventofcode.com/2024/day/2) | [Solution](day02/) | ⭐⭐ |
-| 03 | [Mull It Over](https://adventofcode.com/2024/day/3) | [Solution](day03/) | ⭐⭐ |
+| Day | Problem                                                   | Solution           | Stars |
+| --- | --------------------------------------------------------- | ------------------ | ----- |
+| 01  | [Historian Hysteria](https://adventofcode.com/2024/day/1) | [Solution](day01/) | ⭐⭐  |
+| 02  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)  | [Solution](day02/) | ⭐⭐  |
+| 03  | [Mull It Over](https://adventofcode.com/2024/day/3)       | [Solution](day03/) | ⭐⭐  |
+| 04  | [Ceres Search](https://adventofcode.com/2024/day/4)       | [Solution](day04/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -72,20 +73,30 @@ g++ -std=c++17 partY.cpp -o solution
 ## Learnings and Notes
 
 ### Day 1
+
 - Learned about sorting-based approach for minimum distance pairing
 - Used hash maps for efficient counting in Part 2
 - Handled integer overflow cases using long long
 
 ### Day 2
+
 - Implemented solution for analyzing nuclear reactor safety reports
 - Used vector operations for efficient sequence checking
 - Added support for Problem Dampener feature in Part 2
 
 ### Day 3
+
 - Implemented pattern matching for parsing corrupted memory data
 - Used state management for conditional instruction processing
 - Optimized string parsing with early validation checks
 - Handled edge cases in multiplication instruction parsing
+
+### Day 4
+
+- Developed grid search algorithm for word pattern matching
+- Implemented efficient X-MAS pattern detection using coordinate transformations
+- Optimized intersection point detection for crossed patterns
+- Handled both forward and reverse pattern matching
 
 ## Acknowledgments
 
