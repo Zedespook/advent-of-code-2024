@@ -11,10 +11,13 @@ struct Point {
 bool check_mas(const vector<string> &grid, Point start, Point dir,
                bool reverse) {
   string_view pattern = reverse ? "SAM" : "MAS";
+  const auto rows = static_cast<int>(grid.size());
+  const auto cols = static_cast<int>(grid[0].size());
+
   for (int i = 0; i < 3; ++i) {
     Point pos = start + Point{dir.row * i, dir.col * i};
-    if (pos.row < 0 || pos.row >= grid.size() || pos.col < 0 ||
-        pos.col >= grid[0].size() || grid[pos.row][pos.col] != pattern[i]) {
+    if (pos.row < 0 || pos.row >= rows || pos.col < 0 || pos.col >= cols ||
+        grid[pos.row][pos.col] != pattern[i]) {
       return false;
     }
   }

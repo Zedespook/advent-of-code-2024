@@ -7,11 +7,14 @@ constexpr array<pair<int, int>, 8> directions = {
 bool check_xmas(const vector<string> &grid, int row, int col, int drow,
                 int dcol) {
   string_view pattern = "XMAS";
+  const auto rows = static_cast<int>(grid.size());
+  const auto cols = static_cast<int>(grid[0].size());
+
   for (int i = 0; i < 4; ++i) {
     int new_row = row + i * drow;
     int new_col = col + i * dcol;
-    if (new_row < 0 || new_row >= grid.size() || new_col < 0 ||
-        new_col >= grid[0].size() || grid[new_row][new_col] != pattern[i]) {
+    if (new_row < 0 || new_row >= rows || new_col < 0 || new_col >= cols ||
+        grid[new_row][new_col] != pattern[i]) {
       return false;
     }
   }
