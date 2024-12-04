@@ -15,9 +15,10 @@ else
 fi
 
 usage() {
-    echo "Usage: $0 <day> [part]"
+    echo "Usage: $0 [day] [part]"
     echo "  day:  Day number (1-25)"
     echo "  part: Solution part to run (1 or 2, optional - runs both if omitted)"
+    echo "  If no arguments are provided, runs all available solutions"
     exit 1
 }
 
@@ -88,12 +89,35 @@ compile_and_run() {
     fi
 }
 
-if [ $# -lt 1 ]; then
-    usage
-fi
+run_day() {
+    day=$1
+    compile_and_run "$day" "1"
+    if [ $? -eq 0 ]; then
+        echo
+        compile_and_run "$day" "2"
+    fi
+}
+
+run_all_solutions() {
+    echo "${BOLD}${BLUE}=== Running all available solutions ===${RESET}"
+    echo
+    for day in $(seq 1 25); do
+        day_padded=$(printf "%02d" "$day")
+        if [ -d "day${day_padded}" ] && [ -f "day${day_padded}/part1.cpp" ]; then
+            echo "${BOLD}${BLUE}=================================================================================${RESET}"
+            run_day "$day"
+            echo
+        fi
+    done
+}
 
 day=$1
 part=$2
+
+if [ $# -eq 0 ]; then
+    run_all_solutions
+    exit 0
+fi
 
 case $day in
 [1-9] | 1[0-9] | 2[0-5]) ;;
@@ -118,9 +142,5 @@ print_header "$day" "$part"
 if [ -n "$part" ]; then
     compile_and_run "$day" "$part"
 else
-    compile_and_run "$day" "1"
-    if [ $? -eq 0 ]; then
-        echo
-        compile_and_run "$day" "2"
-    fi
+    run_day "$day"
 fi
