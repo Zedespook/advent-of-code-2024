@@ -29,9 +29,30 @@ print_header() {
     echo
 }
 
+cleanup() {
+    day=$1
+    part=$2
+    day_padded=$(printf "%02d" "$day")
+    executable="day${day_padded}/solution${part}"
+    rm -f "$executable"
+}
+
+trap_cleanup() {
+    echo
+    echo "${BLUE}Cleaning up...${RESET}"
+    if [ -n "$running_day" ] && [ -n "$running_part" ]; then
+        cleanup "$running_day" "$running_part"
+    fi
+    exit 1
+}
+
+trap trap_cleanup INT TERM
+
 compile_and_run() {
     day=$1
     part=$2
+    running_day=$day
+    running_part=$part
     day_padded=$(printf "%02d" "$day")
     source_file="day${day_padded}/part${part}.cpp"
     executable="day${day_padded}/solution${part}"
@@ -56,9 +77,13 @@ compile_and_run() {
         echo "${BOLD}Output:${RESET}"
         echo "----------------------------------------"
         ASAN_OPTIONS=detect_leaks=0 "$executable" <"$input_file"
+        result=$?
         echo "----------------------------------------"
+        cleanup "$day" "$part"
+        return $result
     else
         echo "${RED}Compilation failed${RESET}"
+        cleanup "$day" "$part"
         return 1
     fi
 }
