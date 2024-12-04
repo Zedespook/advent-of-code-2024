@@ -42,6 +42,9 @@ The `aoc` script in the repository root provides a streamlined way to compile an
 # Make the script executable (first time only)
 chmod +x aoc
 
+# Run all available solutions
+./aoc
+
 # Run both parts of a day
 ./aoc <day>
 
@@ -49,6 +52,7 @@ chmod +x aoc
 ./aoc <day> <part>
 
 # Examples:
+./aoc       # Run all solutions
 ./aoc 1     # Run both parts of Day 1
 ./aoc 2 1   # Run only Part 1 of Day 2
 ```
