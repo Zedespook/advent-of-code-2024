@@ -6,7 +6,7 @@ bool isStrictlySafe(const vector<int> &levels) {
     return false;
 
   vector<int> diffs;
-  for (int i = 1; i < levels.size(); i++) {
+  for (size_t i = 1; i < levels.size(); i++) {
     diffs.push_back(levels[i] - levels[i - 1]);
   }
 
@@ -24,7 +24,7 @@ bool isSafe(const vector<int> &levels) {
   if (isStrictlySafe(levels))
     return true;
 
-  for (int i = 0; i < levels.size(); i++) {
+  for (size_t i = 0; i < levels.size(); i++) {
     vector<int> modified = levels;
     modified.erase(modified.begin() + i);
     if (isStrictlySafe(modified))

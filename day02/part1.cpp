@@ -6,7 +6,7 @@ bool isSafe(const vector<int> &levels) {
     return false;
 
   vector<int> diffs;
-  for (int i = 1; i < levels.size(); i++) {
+  for (size_t i = 1; i < levels.size(); i++) {
     diffs.push_back(levels[i] - levels[i - 1]);
   }
 
