@@ -29,6 +29,7 @@ advent-of-code-2024/
 | 02  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)  | [Solution](day02/) | ⭐⭐  |
 | 03  | [Mull It Over](https://adventofcode.com/2024/day/3)       | [Solution](day03/) | ⭐⭐  |
 | 04  | [Ceres Search](https://adventofcode.com/2024/day/4)       | [Solution](day04/) | ⭐⭐  |
+| 05  | [Print Queue](https://adventofcode.com/2024/day/5)        | [Solution](day05/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -109,6 +110,13 @@ All solutions are compiled with the following flags:
 - Implemented efficient X-MAS pattern detection using coordinate transformations
 - Optimized intersection point detection for crossed patterns
 - Handled both forward and reverse pattern matching
+
+### Day 5
+
+- Implemented topological sort for printer queue ordering
+- Used adjacency lists for efficient graph representation
+- Added verification for cyclical dependencies
+- Optimized middle element finding for ordered sequences
 
 ## Acknowledgments
 
