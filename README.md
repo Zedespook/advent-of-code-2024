@@ -30,6 +30,7 @@ advent-of-code-2024/
 | 03  | [Mull It Over](https://adventofcode.com/2024/day/3)       | [Solution](day03/) | ⭐⭐  |
 | 04  | [Ceres Search](https://adventofcode.com/2024/day/4)       | [Solution](day04/) | ⭐⭐  |
 | 05  | [Print Queue](https://adventofcode.com/2024/day/5)        | [Solution](day05/) | ⭐⭐  |
+| 06  | [Guard Gallivant](https://adventofcode.com/2024/day/6)    | [Solution](day06/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -117,6 +118,13 @@ All solutions are compiled with the following flags:
 - Used adjacency lists for efficient graph representation
 - Added verification for cyclical dependencies
 - Optimized middle element finding for ordered sequences
+
+### Day 6
+
+- Developed grid-based path simulation for guard movement patterns
+- Implemented direction vectors for efficient movement tracking
+- Used state detection for identifying cyclic patrol routes
+- Optimized loop detection with position-direction state tracking
 
 ## Acknowledgments
 
