@@ -31,6 +31,7 @@ advent-of-code-2024/
 | 04  | [Ceres Search](https://adventofcode.com/2024/day/4)       | [Solution](day04/) | ⭐⭐  |
 | 05  | [Print Queue](https://adventofcode.com/2024/day/5)        | [Solution](day05/) | ⭐⭐  |
 | 06  | [Guard Gallivant](https://adventofcode.com/2024/day/6)    | [Solution](day06/) | ⭐⭐  |
+| 07  | [Bridge Repair](https://adventofcode.com/2024/day/7)      | [Solution](day07/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -125,6 +126,14 @@ All solutions are compiled with the following flags:
 - Implemented direction vectors for efficient movement tracking
 - Used state detection for identifying cyclic patrol routes
 - Optimized loop detection with position-direction state tracking
+
+### Day 7
+
+- Implemented operator evaluation for bridge repair calibration equations
+- Used bit manipulation for efficient operator combination testing in Part 1
+- Extended solution with base-3 number system for three operators in Part 2
+- Handled string concatenation operations while maintaining left-to-right evaluation
+- Optimized number parsing and validation for large test values
 
 ## Acknowledgments
 
