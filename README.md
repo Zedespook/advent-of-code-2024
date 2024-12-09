@@ -23,15 +23,16 @@ advent-of-code-2024/
 
 ## Solutions
 
-| Day | Problem                                                   | Solution           | Stars |
-| --- | --------------------------------------------------------- | ------------------ | ----- |
-| 01  | [Historian Hysteria](https://adventofcode.com/2024/day/1) | [Solution](day01/) | ⭐⭐  |
-| 02  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)  | [Solution](day02/) | ⭐⭐  |
-| 03  | [Mull It Over](https://adventofcode.com/2024/day/3)       | [Solution](day03/) | ⭐⭐  |
-| 04  | [Ceres Search](https://adventofcode.com/2024/day/4)       | [Solution](day04/) | ⭐⭐  |
-| 05  | [Print Queue](https://adventofcode.com/2024/day/5)        | [Solution](day05/) | ⭐⭐  |
-| 06  | [Guard Gallivant](https://adventofcode.com/2024/day/6)    | [Solution](day06/) | ⭐⭐  |
-| 07  | [Bridge Repair](https://adventofcode.com/2024/day/7)      | [Solution](day07/) | ⭐⭐  |
+| Day | Problem                                                      | Solution           | Stars |
+| --- | ------------------------------------------------------------ | ------------------ | ----- |
+| 01  | [Historian Hysteria](https://adventofcode.com/2024/day/1)    | [Solution](day01/) | ⭐⭐  |
+| 02  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)     | [Solution](day02/) | ⭐⭐  |
+| 03  | [Mull It Over](https://adventofcode.com/2024/day/3)          | [Solution](day03/) | ⭐⭐  |
+| 04  | [Ceres Search](https://adventofcode.com/2024/day/4)          | [Solution](day04/) | ⭐⭐  |
+| 05  | [Print Queue](https://adventofcode.com/2024/day/5)           | [Solution](day05/) | ⭐⭐  |
+| 06  | [Guard Gallivant](https://adventofcode.com/2024/day/6)       | [Solution](day06/) | ⭐⭐  |
+| 07  | [Bridge Repair](https://adventofcode.com/2024/day/7)         | [Solution](day07/) | ⭐⭐  |
+| 08  | [Resonant Collinearity](https://adventofcode.com/2024/day/8) | [Solution](day08/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -134,6 +135,14 @@ All solutions are compiled with the following flags:
 - Extended solution with base-3 number system for three operators in Part 2
 - Handled string concatenation operations while maintaining left-to-right evaluation
 - Optimized number parsing and validation for large test values
+
+### Day 8
+
+- Implemented grid-based antenna frequency analysis for signal interference patterns
+- Developed efficient algorithms for calculating antinode positions based on antenna pairs
+- Used cross product calculations to determine collinear points in Part 2
+- Optimized position tracking with set-based data structures to ensure unique antinode counts
+- Handled both distance-based and collinearity-based resonance calculations
 
 ## Acknowledgments
 
