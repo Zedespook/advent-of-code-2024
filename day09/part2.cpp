@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 
 struct File {
   int id;
