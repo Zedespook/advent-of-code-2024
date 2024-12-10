@@ -25,15 +25,16 @@ advent-of-code-2024/
 
 | Day | Problem                                                      | Solution           | Stars |
 | --- | ------------------------------------------------------------ | ------------------ | ----- |
-| 01  | [Historian Hysteria](https://adventofcode.com/2024/day/1)    | [Solution](day01/) | ⭐⭐    |
-| 02  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)     | [Solution](day02/) | ⭐⭐    |
-| 03  | [Mull It Over](https://adventofcode.com/2024/day/3)          | [Solution](day03/) | ⭐⭐    |
-| 04  | [Ceres Search](https://adventofcode.com/2024/day/4)          | [Solution](day04/) | ⭐⭐    |
-| 05  | [Print Queue](https://adventofcode.com/2024/day/5)           | [Solution](day05/) | ⭐⭐    |
-| 06  | [Guard Gallivant](https://adventofcode.com/2024/day/6)       | [Solution](day06/) | ⭐⭐    |
-| 07  | [Bridge Repair](https://adventofcode.com/2024/day/7)         | [Solution](day07/) | ⭐⭐    |
-| 08  | [Resonant Collinearity](https://adventofcode.com/2024/day/8) | [Solution](day08/) | ⭐⭐    |
-| 09  | [Disk Defragmentation](https://adventofcode.com/2024/day/9)  | [Solution](day09/) | ⭐⭐    |
+| 01  | [Historian Hysteria](https://adventofcode.com/2024/day/1)    | [Solution](day01/) | ⭐⭐  |
+| 02  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)     | [Solution](day02/) | ⭐⭐  |
+| 03  | [Mull It Over](https://adventofcode.com/2024/day/3)          | [Solution](day03/) | ⭐⭐  |
+| 04  | [Ceres Search](https://adventofcode.com/2024/day/4)          | [Solution](day04/) | ⭐⭐  |
+| 05  | [Print Queue](https://adventofcode.com/2024/day/5)           | [Solution](day05/) | ⭐⭐  |
+| 06  | [Guard Gallivant](https://adventofcode.com/2024/day/6)       | [Solution](day06/) | ⭐⭐  |
+| 07  | [Bridge Repair](https://adventofcode.com/2024/day/7)         | [Solution](day07/) | ⭐⭐  |
+| 08  | [Resonant Collinearity](https://adventofcode.com/2024/day/8) | [Solution](day08/) | ⭐⭐  |
+| 09  | [Disk Defragmentation](https://adventofcode.com/2024/day/9)  | [Solution](day09/) | ⭐⭐  |
+| 10  | [Hoof It](https://adventofcode.com/2024/day/10)              | [Solution](day10/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -152,6 +153,15 @@ All solutions are compiled with the following flags:
 - Part 1 focused on simple left-to-right defragmentation
 - Part 2 added complexity with optimal file placement strategies
 - Handled file position tracking and checksum calculations efficiently
+
+### Day 10
+
+- Implemented path-finding algorithms for hiking trail analysis
+- Used DFS with backtracking for exploring valid height-increasing paths
+- Part 1 focused on counting unique reachable endpoints
+- Part 2 required tracking complete unique paths using string encoding
+- Optimized memory usage with visited array reuse in backtracking
+- Handled large path counts with appropriate data types
 
 ## Acknowledgments
 
