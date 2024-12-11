@@ -35,6 +35,7 @@ advent-of-code-2024/
 | 08  | [Resonant Collinearity](https://adventofcode.com/2024/day/8) | [Solution](day08/) | ⭐⭐  |
 | 09  | [Disk Defragmentation](https://adventofcode.com/2024/day/9)  | [Solution](day09/) | ⭐⭐  |
 | 10  | [Hoof It](https://adventofcode.com/2024/day/10)              | [Solution](day10/) | ⭐⭐  |
+| 11  | [Plutonian Pebbles](https://adventofcode.com/2024/day/11)    | [Solution](day11/) | ⭐    |
 
 ## Running the Solutions
 
@@ -162,6 +163,15 @@ All solutions are compiled with the following flags:
 - Part 2 required tracking complete unique paths using string encoding
 - Optimized memory usage with visited array reuse in backtracking
 - Handled large path counts with appropriate data types
+
+### Day 11
+
+- Implemented stone evolution simulation with multiple transformation rules
+- Used map to track stone counts instead of individual stones for efficiency
+- Handled large numbers with \_\_int128_t for final count
+- Optimized memory usage by avoiding storage of duplicate stones
+- Implemented string-based number splitting for even-digit numbers
+- Used structured bindings for cleaner map iteration
 
 ## Acknowledgments
 
