@@ -35,7 +35,8 @@ advent-of-code-2024/
 | 08  | [Resonant Collinearity](https://adventofcode.com/2024/day/8) | [Solution](day08/) | ⭐⭐  |
 | 09  | [Disk Defragmentation](https://adventofcode.com/2024/day/9)  | [Solution](day09/) | ⭐⭐  |
 | 10  | [Hoof It](https://adventofcode.com/2024/day/10)              | [Solution](day10/) | ⭐⭐  |
-| 11  | [Plutonian Pebbles](https://adventofcode.com/2024/day/11)    | [Solution](day11/) | ⭐    |
+| 11  | [Plutonian Pebbles](https://adventofcode.com/2024/day/11)    | [Solution](day11/) | ⭐⭐  |
+| 12  | [Garden Groups](https://adventofcode.com/2024/day/12)        | [Solution](day12/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -172,6 +173,14 @@ All solutions are compiled with the following flags:
 - Optimized memory usage by avoiding storage of duplicate stones
 - Implemented string-based number splitting for even-digit numbers
 - Used structured bindings for cleaner map iteration
+
+### Day 12
+
+- Implemented flood fill algorithm for finding connected garden plot regions
+- Used efficient boundary counting with state tracking
+- Optimized memory usage with set-based data structures
+- Handled both perimeter counting (Part 1) and distinct sides counting (Part 2)
+- Improved performance by avoiding redundant boundary checks
 
 ## Acknowledgments
 
