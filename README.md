@@ -37,6 +37,7 @@ advent-of-code-2024/
 | 10  | [Hoof It](https://adventofcode.com/2024/day/10)              | [Solution](day10/) | ⭐⭐  |
 | 11  | [Plutonian Pebbles](https://adventofcode.com/2024/day/11)    | [Solution](day11/) | ⭐⭐  |
 | 12  | [Garden Groups](https://adventofcode.com/2024/day/12)        | [Solution](day12/) | ⭐⭐  |
+| 13  | [Claw Contraption](https://adventofcode.com/2024/day/13)     | [Solution](day13/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -181,6 +182,14 @@ All solutions are compiled with the following flags:
 - Optimized memory usage with set-based data structures
 - Handled both perimeter counting (Part 1) and distinct sides counting (Part 2)
 - Improved performance by avoiding redundant boundary checks
+
+### Day 13
+
+- Implemented linear equation solver for button combination puzzle
+- Used Cramer's rule for solving 2x2 linear systems efficiently
+- Added high-precision floating point calculations for Part 2
+- Handled edge cases with parallel lines and non-integer solutions
+- Optimized solution by avoiding unnecessary matrix operations
 
 ## Acknowledgments
 
