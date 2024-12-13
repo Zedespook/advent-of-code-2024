@@ -11,7 +11,7 @@ int main() {
   vector<int> blocks;
   int fileId = 0;
 
-  for (int i = 0; i < s.length(); i++) {
+  for (size_t i = 0; i < s.length(); i++) {
     int len = s[i] - '0';
     if (i % 2 == 0) {
       for (int j = 0; j < len; j++) {
@@ -34,7 +34,7 @@ int main() {
       break;
 
     int left = 0;
-    while (left < blocks.size() && blocks[left] != -1) {
+    while (static_cast<size_t>(left) < blocks.size() && blocks[left] != -1) {
       left++;
     }
     if (left >= right)
@@ -45,7 +45,7 @@ int main() {
   }
 
   long long checksum = 0;
-  for (int i = 0; i < blocks.size(); i++) {
+  for (size_t i = 0; i < blocks.size(); i++) {
     if (blocks[i] != -1) {
       checksum += (long long)i * blocks[i];
     }

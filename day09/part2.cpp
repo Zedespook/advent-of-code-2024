@@ -70,7 +70,7 @@ int main() {
   }
 
   long long checksum = 0;
-  for (int i = 0; i < blocks.size(); i++) {
+  for (size_t i = 0; i < blocks.size(); i++) {
     if (blocks[i] != -1) {
       checksum += (long long)i * blocks[i];
     }
