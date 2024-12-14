@@ -38,6 +38,7 @@ advent-of-code-2024/
 | 11  | [Plutonian Pebbles](https://adventofcode.com/2024/day/11)    | [Solution](day11/) | ⭐⭐  |
 | 12  | [Garden Groups](https://adventofcode.com/2024/day/12)        | [Solution](day12/) | ⭐⭐  |
 | 13  | [Claw Contraption](https://adventofcode.com/2024/day/13)     | [Solution](day13/) | ⭐⭐  |
+| 14  | [Restroom Redoubt](https://adventofcode.com/2024/day/14)     | [Solution](day14/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -190,6 +191,15 @@ All solutions are compiled with the following flags:
 - Added high-precision floating point calculations for Part 2
 - Handled edge cases with parallel lines and non-integer solutions
 - Optimized solution by avoiding unnecessary matrix operations
+
+### Day 14
+
+- Implemented robot movement simulation with modular arithmetic for position wrapping
+- Used floating-point arithmetic for precise position tracking
+- Part 1 focused on quadrant-based robot counting after fixed time
+- Part 2 required finding first time when horizontal adjacencies exceed threshold
+- Optimized position lookup using set data structure
+- Handled negative coordinates with proper modulo arithmetic
 
 ## Acknowledgments
 
