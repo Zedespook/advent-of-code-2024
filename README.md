@@ -39,7 +39,7 @@ advent-of-code-2024/
 | 12  | [Garden Groups](https://adventofcode.com/2024/day/12)        | [Solution](day12/) | ⭐⭐  |
 | 13  | [Claw Contraption](https://adventofcode.com/2024/day/13)     | [Solution](day13/) | ⭐⭐  |
 | 14  | [Restroom Redoubt](https://adventofcode.com/2024/day/14)     | [Solution](day14/) | ⭐⭐  |
-| 15  | [Box Mover](https://adventofcode.com/2024/day/15)            | [Solution](day15/) | ⭐⭐  |
+| 15  | [Warehouse Woes](https://adventofcode.com/2024/day/15)       | [Solution](day15/) | ⭐⭐  |
 
 ## Running the Solutions
 
