@@ -39,6 +39,7 @@ advent-of-code-2024/
 | 12  | [Garden Groups](https://adventofcode.com/2024/day/12)        | [Solution](day12/) | ⭐⭐  |
 | 13  | [Claw Contraption](https://adventofcode.com/2024/day/13)     | [Solution](day13/) | ⭐⭐  |
 | 14  | [Restroom Redoubt](https://adventofcode.com/2024/day/14)     | [Solution](day14/) | ⭐⭐  |
+| 15  | [Box Mover](https://adventofcode.com/2024/day/15)            | [Solution](day15/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -200,6 +201,17 @@ All solutions are compiled with the following flags:
 - Part 2 required finding first time when horizontal adjacencies exceed threshold
 - Optimized position lookup using set data structure
 - Handled negative coordinates with proper modulo arithmetic
+
+### Day 15
+
+- Implemented grid-based box pushing simulation with robot movement
+- Used lambda functions for direction handling to reduce code duplication
+- Part 1 focused on single box movement with simple collision detection
+- Part 2 added complexity with chained box movements and expanded grid
+- Optimized box chain detection using set data structure
+- Handled edge cases with wall collisions and multi-box interactions
+- Implemented efficient grid state management for box movements
+- Special thanks to [zebalu](https://github.com/zebalu) for their [amazing Java solution that I used as a reference](https://github.com/zebalu/advent-of-code-2024/blob/master/solution/src/main/java/io/github/zebalu/aoc2024/Day15.java)!
 
 ## Acknowledgments
 
