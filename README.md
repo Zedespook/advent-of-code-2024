@@ -40,6 +40,7 @@ advent-of-code-2024/
 | 13  | [Claw Contraption](https://adventofcode.com/2024/day/13)     | [Solution](day13/) | ⭐⭐  |
 | 14  | [Restroom Redoubt](https://adventofcode.com/2024/day/14)     | [Solution](day14/) | ⭐⭐  |
 | 15  | [Warehouse Woes](https://adventofcode.com/2024/day/15)       | [Solution](day15/) | ⭐⭐  |
+| 16  | [Reindeer Maze](https://adventofcode.com/2024/day/16)        | [Solution](day16/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -212,6 +213,17 @@ All solutions are compiled with the following flags:
 - Handled edge cases with wall collisions and multi-box interactions
 - Implemented efficient grid state management for box movements
 - Special thanks to [zebalu](https://github.com/zebalu) for their [amazing Java solution that I used as a reference](https://github.com/zebalu/advent-of-code-2024/blob/master/solution/src/main/java/io/github/zebalu/aoc2024/Day15.java)!
+
+### Day 16
+
+- Implemented Dijkstra's algorithm for finding optimal paths through reindeer maze
+- Used state-based approach to track both position and direction in maze navigation
+- Part 1 focused on finding shortest path with rotation costs
+- Part 2 added complexity with path reconstruction and optimal tile counting
+- Optimized memory usage with map-based distance tracking
+- Handled rotation costs efficiently with modular arithmetic
+- Implemented backtracking for finding all optimal paths in Part 2
+- Used set data structure for tracking unique visited tiles
 
 ## Acknowledgments
 
