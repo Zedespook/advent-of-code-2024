@@ -67,17 +67,22 @@ vector<i64> run(const vector<i64> &program, i64 a, i64 b, i64 c) {
   return output;
 }
 
-// Helper function to split string by delimiter
 vector<string> split(const string &s, char delimiter) {
   vector<string> tokens;
   string token;
   istringstream tokenStream(s);
   while (getline(tokenStream, token, delimiter)) {
-    if (!token.empty()) {
+    if (!token.empty())
       tokens.push_back(token);
-    }
   }
   return tokens;
+}
+
+bool sequenceEqual(const vector<i64> &a, const vector<i64> &b,
+                   size_t startIdx) {
+  if (startIdx >= a.size() || startIdx >= b.size())
+    return false;
+  return equal(a.begin() + startIdx, a.end(), b.begin() + startIdx);
 }
 
 int main() {
@@ -103,16 +108,20 @@ int main() {
     program.push_back(stoll(num));
   }
 
-  // Run program with initial registers
-  auto result = run(program, registers[0], registers[1], registers[2]);
+  i64 current = 0;
+  for (int digit = program.size() - 1; digit >= 0; digit--) {
+    for (i64 i = 0; i < INT_MAX; i++) {
+      i64 candidate = current + (1LL << (digit * 3)) * i;
+      auto output = run(program, candidate, 0, 0);
 
-  // Output result
-  for (size_t i = 0; i < result.size(); i++) {
-    cout << result[i];
-    if (i < result.size() - 1)
-      cout << ",";
+      if (sequenceEqual(output, program, digit)) {
+        current = candidate;
+        break;
+      }
+    }
   }
-  cout << endl;
+
+  cout << current << endl;
 
   return 0;
 }

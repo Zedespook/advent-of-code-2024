@@ -41,7 +41,7 @@ advent-of-code-2024/
 | 14  | [Restroom Redoubt](https://adventofcode.com/2024/day/14)       | [Solution](day14/) | ⭐⭐  |
 | 15  | [Warehouse Woes](https://adventofcode.com/2024/day/15)         | [Solution](day15/) | ⭐⭐  |
 | 16  | [Reindeer Maze](https://adventofcode.com/2024/day/16)          | [Solution](day16/) | ⭐⭐  |
-| 17  | [Chronospatial Computer](https://adventofcode.com/2024/day/17) | [Solution](day17/) | ⭐    |
+| 17  | [Chronospatial Computer](https://adventofcode.com/2024/day/17) | [Solution](day17/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -229,10 +229,12 @@ All solutions are compiled with the following flags:
 ### Day 17
 
 - Implemented virtual machine for chronospatial computer simulation
-- Used switch-case for efficient opcode handling
-- Implemented register-based computation with bit manipulation
+- Used switch-case for efficient opcode handling with bit manipulation operations
+- Part 1 focused on executing programs with register-based computation
+- Part 2 added complexity with reverse engineering program outputs
+- Optimized memory usage with vector-based instruction storage
 - Handled various instruction types including arithmetic and control flow
-- Optimized input parsing with string stream operations
+- Special thanks to [TrueNorthIT](https://github.com/TrueNorthIT) for their insightful approach to handling register operations!
 
 ## Acknowledgments
 
