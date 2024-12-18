@@ -42,6 +42,7 @@ advent-of-code-2024/
 | 15  | [Warehouse Woes](https://adventofcode.com/2024/day/15)         | [Solution](day15/) | ⭐⭐  |
 | 16  | [Reindeer Maze](https://adventofcode.com/2024/day/16)          | [Solution](day16/) | ⭐⭐  |
 | 17  | [Chronospatial Computer](https://adventofcode.com/2024/day/17) | [Solution](day17/) | ⭐⭐  |
+| 18  | [RAM Run](https://adventofcode.com/2024/day/18)                | [Solution](day18/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -235,6 +236,20 @@ All solutions are compiled with the following flags:
 - Optimized memory usage with vector-based instruction storage
 - Handled various instruction types including arithmetic and control flow
 - Special thanks to [TrueNorthIT](https://github.com/TrueNorthIT) for their insightful approach to handling register operations!
+
+### Day 18
+
+- Implemented BFS-based pathfinding in a dynamic grid environment
+- Used vector of vectors for efficient grid representation and updates
+- Part 1 focused on finding shortest path avoiding first 1024 corrupted cells
+- Part 2 required finding critical point that blocks all possible paths
+- Optimized memory usage with boolean grid for corruption tracking
+- Handled coordinate system with proper bounds checking
+- Used structured bindings for cleaner queue element access
+- Resolved signed/unsigned comparison warnings using size_t
+- Implemented efficient path existence checking for part 2
+- Used min<size_t> for safe comparison between different integer types
+- Used freopen for input file reading as an alternative to ios::sync_with_stdio approach
 
 ## Acknowledgments
 
