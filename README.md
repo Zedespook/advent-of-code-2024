@@ -23,24 +23,25 @@ advent-of-code-2024/
 
 ## Solutions
 
-| Day | Problem                                                      | Solution           | Stars |
-| --- | ------------------------------------------------------------ | ------------------ | ----- |
-| 01  | [Historian Hysteria](https://adventofcode.com/2024/day/1)    | [Solution](day01/) | ⭐⭐  |
-| 02  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)     | [Solution](day02/) | ⭐⭐  |
-| 03  | [Mull It Over](https://adventofcode.com/2024/day/3)          | [Solution](day03/) | ⭐⭐  |
-| 04  | [Ceres Search](https://adventofcode.com/2024/day/4)          | [Solution](day04/) | ⭐⭐  |
-| 05  | [Print Queue](https://adventofcode.com/2024/day/5)           | [Solution](day05/) | ⭐⭐  |
-| 06  | [Guard Gallivant](https://adventofcode.com/2024/day/6)       | [Solution](day06/) | ⭐⭐  |
-| 07  | [Bridge Repair](https://adventofcode.com/2024/day/7)         | [Solution](day07/) | ⭐⭐  |
-| 08  | [Resonant Collinearity](https://adventofcode.com/2024/day/8) | [Solution](day08/) | ⭐⭐  |
-| 09  | [Disk Defragmentation](https://adventofcode.com/2024/day/9)  | [Solution](day09/) | ⭐⭐  |
-| 10  | [Hoof It](https://adventofcode.com/2024/day/10)              | [Solution](day10/) | ⭐⭐  |
-| 11  | [Plutonian Pebbles](https://adventofcode.com/2024/day/11)    | [Solution](day11/) | ⭐⭐  |
-| 12  | [Garden Groups](https://adventofcode.com/2024/day/12)        | [Solution](day12/) | ⭐⭐  |
-| 13  | [Claw Contraption](https://adventofcode.com/2024/day/13)     | [Solution](day13/) | ⭐⭐  |
-| 14  | [Restroom Redoubt](https://adventofcode.com/2024/day/14)     | [Solution](day14/) | ⭐⭐  |
-| 15  | [Warehouse Woes](https://adventofcode.com/2024/day/15)       | [Solution](day15/) | ⭐⭐  |
-| 16  | [Reindeer Maze](https://adventofcode.com/2024/day/16)        | [Solution](day16/) | ⭐⭐  |
+| Day | Problem                                                        | Solution           | Stars |
+| --- | -------------------------------------------------------------- | ------------------ | ----- |
+| 01  | [Historian Hysteria](https://adventofcode.com/2024/day/1)      | [Solution](day01/) | ⭐⭐  |
+| 02  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)       | [Solution](day02/) | ⭐⭐  |
+| 03  | [Mull It Over](https://adventofcode.com/2024/day/3)            | [Solution](day03/) | ⭐⭐  |
+| 04  | [Ceres Search](https://adventofcode.com/2024/day/4)            | [Solution](day04/) | ⭐⭐  |
+| 05  | [Print Queue](https://adventofcode.com/2024/day/5)             | [Solution](day05/) | ⭐⭐  |
+| 06  | [Guard Gallivant](https://adventofcode.com/2024/day/6)         | [Solution](day06/) | ⭐⭐  |
+| 07  | [Bridge Repair](https://adventofcode.com/2024/day/7)           | [Solution](day07/) | ⭐⭐  |
+| 08  | [Resonant Collinearity](https://adventofcode.com/2024/day/8)   | [Solution](day08/) | ⭐⭐  |
+| 09  | [Disk Defragmentation](https://adventofcode.com/2024/day/9)    | [Solution](day09/) | ⭐⭐  |
+| 10  | [Hoof It](https://adventofcode.com/2024/day/10)                | [Solution](day10/) | ⭐⭐  |
+| 11  | [Plutonian Pebbles](https://adventofcode.com/2024/day/11)      | [Solution](day11/) | ⭐⭐  |
+| 12  | [Garden Groups](https://adventofcode.com/2024/day/12)          | [Solution](day12/) | ⭐⭐  |
+| 13  | [Claw Contraption](https://adventofcode.com/2024/day/13)       | [Solution](day13/) | ⭐⭐  |
+| 14  | [Restroom Redoubt](https://adventofcode.com/2024/day/14)       | [Solution](day14/) | ⭐⭐  |
+| 15  | [Warehouse Woes](https://adventofcode.com/2024/day/15)         | [Solution](day15/) | ⭐⭐  |
+| 16  | [Reindeer Maze](https://adventofcode.com/2024/day/16)          | [Solution](day16/) | ⭐⭐  |
+| 17  | [Chronospatial Computer](https://adventofcode.com/2024/day/17) | [Solution](day17/) | ⭐    |
 
 ## Running the Solutions
 
@@ -224,6 +225,14 @@ All solutions are compiled with the following flags:
 - Handled rotation costs efficiently with modular arithmetic
 - Implemented backtracking for finding all optimal paths in Part 2
 - Used set data structure for tracking unique visited tiles
+
+### Day 17
+
+- Implemented virtual machine for chronospatial computer simulation
+- Used switch-case for efficient opcode handling
+- Implemented register-based computation with bit manipulation
+- Handled various instruction types including arithmetic and control flow
+- Optimized input parsing with string stream operations
 
 ## Acknowledgments
 
