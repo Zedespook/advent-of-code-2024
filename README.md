@@ -43,6 +43,7 @@ advent-of-code-2024/
 | 16  | [Reindeer Maze](https://adventofcode.com/2024/day/16)          | [Solution](day16/) | ⭐⭐  |
 | 17  | [Chronospatial Computer](https://adventofcode.com/2024/day/17) | [Solution](day17/) | ⭐⭐  |
 | 18  | [RAM Run](https://adventofcode.com/2024/day/18)                | [Solution](day18/) | ⭐⭐  |
+| 19  | [Linen Layout](https://adventofcode.com/2024/day/19)           | [Solution](day19/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -250,6 +251,17 @@ All solutions are compiled with the following flags:
 - Implemented efficient path existence checking for part 2
 - Used min<size_t> for safe comparison between different integer types
 - Used freopen for input file reading as an alternative to ios::sync_with_stdio approach
+
+### Day 19
+
+- Implemented recursive pattern matching for linen design validation
+- Used dynamic programming with memoization to optimize repeated subproblems
+- Part 1 focused on determining if designs could be made from given patterns
+- Part 2 extended to counting all possible pattern combinations
+- Optimized string operations with substr for pattern matching
+- Handled large numbers using long long for combination counting
+- Used unordered_map for efficient memoization of subproblems
+- Implemented efficient input parsing with stringstream
 
 ## Acknowledgments
 
