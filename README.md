@@ -44,6 +44,7 @@ advent-of-code-2024/
 | 17  | [Chronospatial Computer](https://adventofcode.com/2024/day/17) | [Solution](day17/) | ⭐⭐  |
 | 18  | [RAM Run](https://adventofcode.com/2024/day/18)                | [Solution](day18/) | ⭐⭐  |
 | 19  | [Linen Layout](https://adventofcode.com/2024/day/19)           | [Solution](day19/) | ⭐⭐  |
+| 20  | [Race Condition](https://adventofcode.com/2024/day/20)         | [Solution](day20/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -262,6 +263,17 @@ All solutions are compiled with the following flags:
 - Handled large numbers using long long for combination counting
 - Used unordered_map for efficient memoization of subproblems
 - Implemented efficient input parsing with stringstream
+
+### Day 20
+
+- Implemented path optimization algorithm for race track navigation
+- Used BFS for initial path finding with position tracking
+- Part 1 focused on finding optimal skips in straight-line segments
+- Part 2 extended to include diagonal movements and longer skip distances
+- Optimized skip calculation with efficient distance metrics
+- Used map for tracking frequency of different skip lengths
+- Implemented position struct for clean coordinate handling
+- Special thanks to [piman51277](https://github.com/piman51277) for their elegant approach to handling path optimizations!
 
 ## Acknowledgments
 
