@@ -45,6 +45,7 @@ advent-of-code-2024/
 | 18  | [RAM Run](https://adventofcode.com/2024/day/18)                | [Solution](day18/) | ⭐⭐  |
 | 19  | [Linen Layout](https://adventofcode.com/2024/day/19)           | [Solution](day19/) | ⭐⭐  |
 | 20  | [Race Condition](https://adventofcode.com/2024/day/20)         | [Solution](day20/) | ⭐⭐  |
+| 21  | [Step Counter](https://adventofcode.com/2024/day/21)           | [Solution](day21/) | ❌    |
 
 ## Running the Solutions
 
@@ -274,6 +275,11 @@ All solutions are compiled with the following flags:
 - Used map for tracking frequency of different skip lengths
 - Implemented position struct for clean coordinate handling
 - Special thanks to [piman51277](https://github.com/piman51277) for their elegant approach to handling path optimizations!
+
+### Day 21
+
+- Found this challenge to be significantly beyond my current skill level
+- Didn't solve the problem at all
 
 ## Acknowledgments
 
