@@ -46,6 +46,7 @@ advent-of-code-2024/
 | 19  | [Linen Layout](https://adventofcode.com/2024/day/19)           | [Solution](day19/) | ⭐⭐  |
 | 20  | [Race Condition](https://adventofcode.com/2024/day/20)         | [Solution](day20/) | ⭐⭐  |
 | 21  | [Step Counter](https://adventofcode.com/2024/day/21)           | [Solution](day21/) | ❌    |
+| 22  | [Monkey Market](https://adventofcode.com/2024/day/22)          | [Solution](day22/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -280,6 +281,16 @@ All solutions are compiled with the following flags:
 
 - Found this challenge to be significantly beyond my current skill level
 - Didn't solve the problem at all
+
+### Day 22
+
+- Implemented pseudorandom number generation for simulating buyer behavior
+- Used nested loops to explore all possible price change sequences
+- Part 1 focused on calculating the sum of the 2000th secret number for each buyer
+- Part 2 required finding the optimal sequence of four price changes to maximize banana yield
+- Optimized solution by precomputing prices and changes for each buyer
+- Added progress indicator with estimated time remaining for long-running calculations
+- Used modulo arithmetic and bitwise XOR for efficient mixing and pruning operations
 
 ## Acknowledgments
 
