@@ -47,6 +47,7 @@ advent-of-code-2024/
 | 20  | [Race Condition](https://adventofcode.com/2024/day/20)         | [Solution](day20/) | ⭐⭐  |
 | 21  | [Step Counter](https://adventofcode.com/2024/day/21)           | [Solution](day21/) | ❌    |
 | 22  | [Monkey Market](https://adventofcode.com/2024/day/22)          | [Solution](day22/) | ⭐⭐  |
+| 23  | [LAN Party](https://adventofcode.com/2024/day/23)              | [Solution](day23/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -291,6 +292,17 @@ All solutions are compiled with the following flags:
 - Optimized solution by precomputing prices and changes for each buyer
 - Added progress indicator with estimated time remaining for long-running calculations
 - Used modulo arithmetic and bitwise XOR for efficient mixing and pruning operations
+
+### Day 23
+
+- Implemented graph analysis algorithms for network connectivity
+- Part 1 focused on finding triangles (3-cliques) containing specific nodes
+- Part 2 required finding the maximum clique in the network
+- Used adjacency lists with unordered_sets for efficient connection lookups
+- Optimized clique finding with incremental group expansion
+- Implemented efficient connectivity validation using count operations
+- Used sorting for consistent group comparison and password generation
+- Handled large datasets with proper iteration and group management
 
 ## Acknowledgments
 
