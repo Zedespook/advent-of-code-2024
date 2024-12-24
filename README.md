@@ -48,6 +48,7 @@ advent-of-code-2024/
 | 21  | [Step Counter](https://adventofcode.com/2024/day/21)           | [Solution](day21/) | ❌    |
 | 22  | [Monkey Market](https://adventofcode.com/2024/day/22)          | [Solution](day22/) | ⭐⭐  |
 | 23  | [LAN Party](https://adventofcode.com/2024/day/23)              | [Solution](day23/) | ⭐⭐  |
+| 24  | [Circuit Circus](https://adventofcode.com/2024/day/24)         | [Solution](day24/) | ⭐    |
 
 ## Running the Solutions
 
@@ -303,6 +304,16 @@ All solutions are compiled with the following flags:
 - Implemented efficient connectivity validation using count operations
 - Used sorting for consistent group comparison and password generation
 - Handled large datasets with proper iteration and group management
+
+### Day 24
+
+- Implemented circuit simulation with logical gate operations
+- Used maps to store wire values and gate definitions
+- Part 1 focused on simulating the circuit and converting the output to decimal
+- Part 2 was not attempted due to time constraints
+- Handled input parsing for initial wire values and gate operations
+- Implemented iterative evaluation of gates until all outputs are resolved
+- Used string manipulation for wire name generation and binary-to-decimal conversion
 
 ## Acknowledgments
 
