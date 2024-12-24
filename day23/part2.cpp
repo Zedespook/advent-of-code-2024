@@ -1,20 +1,32 @@
 #include <algorithm>
 #include <fstream>
 #include <iostream>
-#include <sstream>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
-using namespace std;
+using Graph = std::unordered_map<std::string, std::unordered_set<std::string>>;
 
-bool are_all_connected(
-    const vector<string> &group,
-    const unordered_map<string, unordered_set<string>> &adj) {
-  for (size_t i = 0; i < group.size(); ++i) {
-    for (size_t j = i + 1; j < group.size(); ++j) {
-      if (adj.at(group[i]).count(group[j]) == 0) {
+Graph buildGraph(const std::string &filename) {
+  Graph graph;
+  std::ifstream file(filename);
+  std::string line;
+
+  while (std::getline(file, line)) {
+    std::string a = line.substr(0, line.find('-'));
+    std::string b = line.substr(line.find('-') + 1);
+    graph[a].insert(b);
+    graph[b].insert(a);
+  }
+
+  return graph;
+}
+
+bool isClique(const Graph &graph, const std::vector<std::string> &group) {
+  for (size_t i = 0; i < group.size(); i++) {
+    for (size_t j = i + 1; j < group.size(); j++) {
+      if (!graph.at(group[i]).count(group[j])) {
         return false;
       }
     }
@@ -22,79 +34,60 @@ bool are_all_connected(
   return true;
 }
 
-int main() {
-  string filename = "day23/input.txt";
-  ifstream file(filename);
-  if (!file.is_open()) {
-    cerr << "Error opening file: " << filename << endl;
-    return 1;
+std::vector<std::string> findLargestClique(const Graph &graph) {
+  std::vector<std::string> nodes;
+  for (const auto &[node, _] : graph) {
+    nodes.push_back(node);
   }
+  std::sort(nodes.begin(), nodes.end());
 
-  unordered_map<string, unordered_set<string>> adj;
-  string line;
-  while (getline(file, line)) {
-    stringstream ss(line);
-    string first, second;
-    getline(ss, first, '-');
-    getline(ss, second);
-    adj[first].insert(second);
-    adj[second].insert(first);
-  }
+  std::vector<std::string> maxClique;
+  std::vector<std::string> currentGroup;
 
-  vector<string> computers;
-  for (const auto &pair : adj) {
-    computers.push_back(pair.first);
-  }
-  sort(computers.begin(), computers.end());
+  // Try each node as a starting point
+  for (const auto &start : nodes) {
+    currentGroup = {start};
+    std::vector<std::string> candidates;
 
-  vector<string> largest_group;
+    // Find all nodes connected to start
+    for (const auto &neighbor : graph.at(start)) {
+      candidates.push_back(neighbor);
+    }
 
-  // Iterate through each computer as a potential starting point for the largest
-  // group
-  for (const string &start_computer : computers) {
-    vector<string> current_group;
-    current_group.push_back(start_computer);
-
-    // Expand the current group by adding connected computers
-    for (size_t i = 0; i < current_group.size(); ++i) {
-      const string &current_computer = current_group[i];
-      for (const string &neighbor : adj[current_computer]) {
-        // Add neighbor to the group if it's not already present and maintains
-        // connectivity
-        if (find(current_group.begin(), current_group.end(), neighbor) ==
-            current_group.end()) {
-          bool all_connected = true;
-          for (const string &existing_member : current_group) {
-            if (adj[neighbor].count(existing_member) == 0) {
-              all_connected = false;
-              break;
-            }
-          }
-          if (all_connected) {
-            current_group.push_back(neighbor);
-          }
+    // Try adding each candidate
+    for (const auto &candidate : candidates) {
+      bool canAdd = true;
+      for (const auto &node : currentGroup) {
+        if (!graph.at(candidate).count(node)) {
+          canAdd = false;
+          break;
         }
+      }
+      if (canAdd) {
+        currentGroup.push_back(candidate);
       }
     }
 
-    // Sort the current group for consistent comparison
-    sort(current_group.begin(), current_group.end());
-
-    // Update the largest group if the current group is larger
-    if (current_group.size() > largest_group.size()) {
-      largest_group = current_group;
+    if (currentGroup.size() > maxClique.size()) {
+      maxClique = currentGroup;
     }
   }
 
-  string password;
-  for (size_t i = 0; i < largest_group.size(); ++i) {
-    password += largest_group[i];
-    if (i < largest_group.size() - 1) {
-      password += ",";
-    }
-  }
+  std::sort(maxClique.begin(), maxClique.end());
+  return maxClique;
+}
 
-  cout << password << endl;
+int main() {
+  auto graph = buildGraph("day23/input.txt");
+  auto clique = findLargestClique(graph);
+
+  // Print the password
+  for (size_t i = 0; i < clique.size(); i++) {
+    std::cout << clique[i];
+    if (i < clique.size() - 1)
+      std::cout << ",";
+  }
+  std::cout << std::endl;
 
   return 0;
 }

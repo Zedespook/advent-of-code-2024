@@ -1,73 +1,43 @@
-#include <chrono>
 #include <fstream>
 #include <iostream>
-#include <sstream>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
 
-using namespace std;
+using Graph = std::unordered_map<std::string, std::unordered_set<std::string>>;
 
-int main() {
-  string filename = "day23/input.txt";
-  ifstream file(filename);
-  if (!file.is_open()) {
-    cerr << "Error opening file: " << filename << endl;
-    return 1;
+Graph buildGraph(const std::string &filename) {
+  Graph graph;
+  std::ifstream file(filename);
+  std::string line;
+
+  while (std::getline(file, line)) {
+    std::string a = line.substr(0, line.find('-'));
+    std::string b = line.substr(line.find('-') + 1);
+    graph[a].insert(b);
+    graph[b].insert(a);
   }
 
-  unordered_map<string, unordered_set<string>> adj;
-  string line;
-  while (getline(file, line)) {
-    stringstream ss(line);
-    string first, second;
-    getline(ss, first, '-');
-    getline(ss, second);
-    adj[first].insert(second);
-    adj[second].insert(first);
-  }
+  return graph;
+}
 
-  vector<string> computers;
-  for (const auto &pair : adj) {
-    computers.push_back(pair.first);
-  }
-
+int countTrianglesWithT(const Graph &graph) {
   int count = 0;
-  int n = computers.size();
-  int total_iterations = n * (n - 1) * (n - 2) / 6;
-  int current_iteration = 0;
-  auto start_time = chrono::high_resolution_clock::now();
+  std::vector<std::string> nodes;
+  for (const auto &[node, _] : graph) {
+    nodes.push_back(node);
+  }
 
-  for (int i = 0; i < n; ++i) {
-    for (int j = i + 1; j < n; ++j) {
-      for (int k = j + 1; k < n; ++k) {
-        current_iteration++;
+  for (size_t i = 0; i < nodes.size(); i++) {
+    for (size_t j = i + 1; j < nodes.size(); j++) {
+      if (!graph.at(nodes[i]).count(nodes[j]))
+        continue;
 
-        // Progress indicator (every 1% of progress)
-        if (current_iteration % (total_iterations / 100) == 0) {
-          auto current_time = chrono::high_resolution_clock::now();
-          auto elapsed_time =
-              chrono::duration_cast<chrono::seconds>(current_time - start_time)
-                  .count();
-          double progress = (double)current_iteration / total_iterations;
-          double estimated_remaining_time =
-              (elapsed_time / progress) - elapsed_time;
-
-          cout << "Progress: " << (progress * 100) << "%";
-          if (elapsed_time > 0) {
-            cout << ", Estimated time remaining: " << estimated_remaining_time
-                 << " seconds";
-          }
-          cout << "\r" << flush;
-        }
-
-        const string &c1 = computers[i];
-        const string &c2 = computers[j];
-        const string &c3 = computers[k];
-
-        if (adj[c1].count(c2) && adj[c1].count(c3) && adj[c2].count(c3)) {
-          if (c1[0] == 't' || c2[0] == 't' || c3[0] == 't') {
+      for (size_t k = j + 1; k < nodes.size(); k++) {
+        if (graph.at(nodes[i]).count(nodes[k]) &&
+            graph.at(nodes[j]).count(nodes[k])) {
+          if (nodes[i][0] == 't' || nodes[j][0] == 't' || nodes[k][0] == 't') {
             count++;
           }
         }
@@ -75,7 +45,11 @@ int main() {
     }
   }
 
-  cout << endl << "Result: " << count << endl;
+  return count;
+}
 
+int main() {
+  auto graph = buildGraph("day23/input.txt");
+  std::cout << countTrianglesWithT(graph) << std::endl;
   return 0;
 }
