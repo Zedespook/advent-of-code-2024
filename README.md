@@ -49,6 +49,7 @@ advent-of-code-2024/
 | 22  | [Monkey Market](https://adventofcode.com/2024/day/22)          | [Solution](day22/) | ⭐⭐  |
 | 23  | [LAN Party](https://adventofcode.com/2024/day/23)              | [Solution](day23/) | ⭐⭐  |
 | 24  | [Circuit Circus](https://adventofcode.com/2024/day/24)         | [Solution](day24/) | ⭐    |
+| 25  | [Code Chronicle](https://adventofcode.com/2024/day/25)         | [Solution](day25/) | ⭐⭐  |
 
 ## Running the Solutions
 
@@ -314,6 +315,14 @@ All solutions are compiled with the following flags:
 - Handled input parsing for initial wire values and gate operations
 - Implemented iterative evaluation of gates until all outputs are resolved
 - Used string manipulation for wire name generation and binary-to-decimal conversion
+
+### Day 25
+
+- Implemented virtual lock and key matching system for office security
+- Used grid-based height calculation for lock pins and key shapes
+- Optimized matching algorithm by measuring heights from appropriate directions
+- Handled overlapping detection with efficient boundary checking
+- Added support for processing multiple lock/key schematics in batch
 
 ## Acknowledgments
 
