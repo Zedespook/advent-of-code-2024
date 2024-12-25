@@ -48,7 +48,7 @@ advent-of-code-2024/
 | 21  | [Step Counter](https://adventofcode.com/2024/day/21)           | [Solution](day21/) | ❌    |
 | 22  | [Monkey Market](https://adventofcode.com/2024/day/22)          | [Solution](day22/) | ⭐⭐  |
 | 23  | [LAN Party](https://adventofcode.com/2024/day/23)              | [Solution](day23/) | ⭐⭐  |
-| 24  | [Circuit Circus](https://adventofcode.com/2024/day/24)         | [Solution](day24/) | ⭐    |
+| 24  | [Circuit Circus](https://adventofcode.com/2024/day/24)         | [Solution](day24/) | ⭐⭐  |
 | 25  | [Code Chronicle](https://adventofcode.com/2024/day/25)         | [Solution](day25/) | ⭐⭐  |
 
 ## Running the Solutions
@@ -311,10 +311,11 @@ All solutions are compiled with the following flags:
 - Implemented circuit simulation with logical gate operations
 - Used maps to store wire values and gate definitions
 - Part 1 focused on simulating the circuit and converting the output to decimal
-- Part 2 was not attempted due to time constraints
-- Handled input parsing for initial wire values and gate operations
-- Implemented iterative evaluation of gates until all outputs are resolved
-- Used string manipulation for wire name generation and binary-to-decimal conversion
+- Part 2 required identifying four pairs of swapped gate outputs
+- Analyzed circuit structure to identify binary adder components
+- Used pattern matching to find XOR-AND gate pairs and carry chains
+- Handled wire dependencies and operation tracking efficiently
+- Implemented sorting for consistent wire name output
 
 ### Day 25
 
