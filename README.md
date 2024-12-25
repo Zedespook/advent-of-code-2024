@@ -45,7 +45,7 @@ advent-of-code-2024/
 | 18  | [RAM Run](https://adventofcode.com/2024/day/18)                | [Solution](day18/) | ⭐⭐  |
 | 19  | [Linen Layout](https://adventofcode.com/2024/day/19)           | [Solution](day19/) | ⭐⭐  |
 | 20  | [Race Condition](https://adventofcode.com/2024/day/20)         | [Solution](day20/) | ⭐⭐  |
-| 21  | [Step Counter](https://adventofcode.com/2024/day/21)           | [Solution](day21/) | ❌    |
+| 21  | [Step Counter](https://adventofcode.com/2024/day/21)           | [Solution](day21/) | ⭐⭐  |
 | 22  | [Monkey Market](https://adventofcode.com/2024/day/22)          | [Solution](day22/) | ⭐⭐  |
 | 23  | [LAN Party](https://adventofcode.com/2024/day/23)              | [Solution](day23/) | ⭐⭐  |
 | 24  | [Circuit Circus](https://adventofcode.com/2024/day/24)         | [Solution](day24/) | ⭐⭐  |
@@ -282,8 +282,12 @@ All solutions are compiled with the following flags:
 
 ### Day 21
 
-- Found this challenge to be significantly beyond my current skill level
-- Didn't solve the problem at all
+- Attempted to implement complex path optimization for robot movement patterns
+- Challenge involved calculating optimal button press sequences
+- Required understanding of multi-dimensional path finding and state management
+- Found the mathematical complexity and optimization requirements beyond current skill level
+- Learned valuable lessons about problem difficulty assessment and knowing when to step back
+- Plan to revisit this challenge after building stronger foundations in advanced algorithms
 
 ### Day 22
 
