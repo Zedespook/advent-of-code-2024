@@ -77,8 +77,12 @@ compile_and_run() {
         echo "${BLUE}Running solution...${RESET}"
         echo "${BOLD}Output:${RESET}"
         echo "----------------------------------------"
-        ASAN_OPTIONS=detect_leaks=0 "$executable" <"$input_file"
-        result=$?
+        if ! timeout 30s sh -c "ASAN_OPTIONS=detect_leaks=0 $executable <$input_file"; then
+            echo "\n${RED}Solution took too long.${RESET}"
+            result=1
+        else
+            result=$?
+        fi
         echo "----------------------------------------"
         cleanup "$day" "$part"
         return $result
